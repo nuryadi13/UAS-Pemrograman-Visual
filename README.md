@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-test
-=======
 # UAS-Pemrograman-Visual
->>>>>>> d41804be52fbf9738f39b052e213179fa02dfb4f
+
+**_Nama: Nuryadi_** <br/>
+**_Nim : 312010621_** <br/>
+**_Kelas : TI.20.A.RPL-1_** <br/>
+**_Mata Kuliah : Pemrograman Visual_** <br/>
+
+# Demonstrasi Video
