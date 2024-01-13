@@ -25,6 +25,7 @@ type
     SQLTransaction1: TSQLTransaction;
     procedure BExitClick(Sender: TObject);
     procedure BLoginClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
 
@@ -44,6 +45,11 @@ implementation
 procedure TTfrmLogin.BLoginClick(Sender: TObject);
 begin
   ModalResult := mrOk;
+end;
+
+procedure TTfrmLogin.FormCreate(Sender: TObject);
+begin
+
 end;
 
 procedure TTfrmLogin.BExitClick(Sender: TObject);

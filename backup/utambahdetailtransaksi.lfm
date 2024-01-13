@@ -1,21 +1,20 @@
 object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
   Left = 529
-  Height = 315
+  Height = 252
   Top = 270
-  Width = 672
+  Width = 538
   Caption = 'Tambah Detail Transaksi'
-  ClientHeight = 315
-  ClientWidth = 672
-  DesignTimePPI = 120
+  ClientHeight = 252
+  ClientWidth = 538
   OnCreate = FormCreate
   object Label1: TLabel
-    Left = 180
-    Height = 37
-    Top = 40
-    Width = 311
+    Left = 144
+    Height = 30
+    Top = 32
+    Width = 250
     Caption = 'Tambah Detail Transaksi'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -27
+    Font.Height = -22
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -23,34 +22,34 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 133
-    Height = 20
-    Top = 113
-    Width = 79
+    Left = 106
+    Height = 15
+    Top = 90
+    Width = 63
     Caption = 'Pilih Barang'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 133
-    Height = 20
-    Top = 160
-    Width = 97
+    Left = 106
+    Height = 15
+    Top = 128
+    Width = 78
     Caption = 'Jumlah Barang'
     ParentColor = False
   end
   object EJumlah: TEdit
-    Left = 280
-    Height = 28
-    Top = 160
-    Width = 213
+    Left = 224
+    Height = 23
+    Top = 128
+    Width = 170
     TabOrder = 0
     TextHint = 'Jumlah Barang'
   end
   object DBLookupBarang: TDBLookupComboBox
-    Left = 280
-    Height = 28
-    Top = 113
-    Width = 213
+    Left = 224
+    Height = 23
+    Top = 90
+    Width = 170
     DataField = 'id'
     DataSource = DataSourcePilihBarang
     KeyField = 'id'
@@ -62,10 +61,10 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     TabOrder = 1
   end
   object BTambahDetailTransaksi: TButton
-    Left = 280
-    Height = 32
-    Top = 213
-    Width = 213
+    Left = 224
+    Height = 26
+    Top = 170
+    Width = 170
     Caption = 'Tambah'
     OnClick = BTambahDetailTransaksiClick
     TabOrder = 2
@@ -83,7 +82,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
         Name = 'kategori'
         DataType = ftString
         Precision = -1
-        Size = 30
+        Size = 110
       end    
       item
         Name = 'nama'
@@ -120,29 +119,30 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     )
     Params = <>
     Macros = <>
-    Left = 587
-    Top = 227
+    Left = 470
+    Top = 182
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
     Database = SQLConnector1
-    Left = 587
-    Top = 153
+    Left = 470
+    Top = 122
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
+    AfterConnect = SQLConnector1AfterConnect
     DatabaseName = 'ritshu'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 587
-    Top = 80
+    Left = 470
+    Top = 64
   end
   object DataSourcePilihBarang: TDataSource
     DataSet = SQLQueryPilihBarang
-    Left = 587
-    Top = 13
+    Left = 470
+    Top = 10
   end
   object SQLQuery2: TSQLQuery
     FieldDefs = <>
@@ -150,13 +150,13 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     Transaction = SQLTransaction1
     Params = <>
     Macros = <>
-    Left = 67
-    Top = 233
+    Left = 54
+    Top = 186
   end
   object DataSource2: TDataSource
     DataSet = SQLQuery2
-    Left = 67
-    Top = 167
+    Left = 54
+    Top = 134
   end
   object frReport1: TfrReport
     Dataset = frDBDataSet1
@@ -164,13 +164,14 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     Options = []
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
-    Left = 67
-    Top = 20
+    Left = 54
+    Top = 16
   end
   object frDBDataSet1: TfrDBDataSet
     DataSet = SQLQuery1
-    Left = 67
-    Top = 93
+    OnCheckEOF = frDBDataSet1CheckEOF
+    Left = 54
+    Top = 74
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -268,7 +269,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     )
     Params = <>
     Macros = <>
-    Left = 200
-    Top = 233
+    Left = 160
+    Top = 186
   end
 end

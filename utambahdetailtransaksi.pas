@@ -32,6 +32,7 @@ type
     procedure DBLookupBarangChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
+    procedure SQLConnector1AfterConnect(Sender: TObject);
   private
     customer: string;
     id_transaksi: integer;
@@ -192,6 +193,11 @@ end;
 
 procedure TTfrmTambahDetailTransaksi.frDBDataSet1CheckEOF(Sender: TObject;
   var Eof: Boolean);
+begin
+
+end;
+
+procedure TTfrmTambahDetailTransaksi.SQLConnector1AfterConnect(Sender: TObject);
 begin
 
 end;

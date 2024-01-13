@@ -84,7 +84,7 @@ object TfrmLogin: TTfrmLogin
   object SQLConnector1: TSQLConnector
     Connected = False
     LoginPrompt = False
-    DatabaseName = 'bisnis'
+    DatabaseName = 'ritshu'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'

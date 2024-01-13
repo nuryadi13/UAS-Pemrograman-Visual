@@ -36,6 +36,7 @@ type
     procedure MenuLoginClick(Sender: TObject);
     procedure MenuLogoutClick(Sender: TObject);
     procedure MenuTransaksiClick(Sender: TObject);
+    procedure StaticText1Click(Sender: TObject);
 
   private
     FUsername: string;
@@ -69,7 +70,7 @@ begin
          FUsername := frmLogin.EUsername.Text;
          FRole := frmLogin.GetRole;
          EnableMenu(MainMenu1.Items);
-         LNS.Caption := 'Selamat datang, ' + UpperCase(Fusername);
+         LNS.Caption := 'Selamat datang saudara, ' + UpperCase(Fusername);
          LNS.Visible:= true;
          if FRole <> 1 then
          begin
@@ -113,6 +114,11 @@ begin
       Self.Show;
       frmTambahTransaksi.Free;
    end;
+end;
+
+procedure TTfrmMain.StaticText1Click(Sender: TObject);
+begin
+
 end;
 
 procedure TTfrmMain.FormCreate(Sender: TObject);

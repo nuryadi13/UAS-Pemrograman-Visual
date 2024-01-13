@@ -6,6 +6,7 @@ object TfrmLogin: TTfrmLogin
   Caption = 'Login'
   ClientHeight = 288
   ClientWidth = 365
+  OnCreate = FormCreate
   object Label1: TLabel
     Left = 166
     Height = 30
